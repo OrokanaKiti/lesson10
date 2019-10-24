@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------
 
 import pytest
+import requests
 
 # ----------------------------------------------------------------------
 # var section of the code
@@ -19,6 +20,7 @@ presProper = ["Washington", "Adams", "Jefferson", "Madison", "Monroe", "Adams", 
 #sample inputs used in inital testing or editing in the code
 sample_input_good = ["Adams"]
 sample_input_bad = ["JoeMama"]
+response = requests.get("https://api.duckduckgo.com/?q=valley+forge+national+park&format=json&pretty=1-q")
 
 #the input from the api to be tested agianst known good inputs
 #duckDuckInput = []
