@@ -8,6 +8,7 @@
 
 import pytest
 import requests
+import json
 
 # ----------------------------------------------------------------------
 # var section of the code
@@ -38,11 +39,21 @@ def test_duckSearch():
     #test the results of duckDuckInput[] for inconsistencies with presproper
     assert 1 == 1 #for duckDuckInput[i] is in presProper[], i++,
 
+def jprint(obj):
+    #testing code to learn how to parse a JSON input from a API system
+    text = json.dumps(obj, sort_keys=True, indent=4)
+    print(text)
 
+# ----------------------------------------------------------------------
+# Testing Main
+# ----------------------------------------------------------------------
+
+print(response.status_code)
+print(response.json())
+jprint(response.json())
 
 # end of program confirmation test
 print("program was allowed to fully execute")
-
 
 # ----------------------------------------------------------------------
 # Junk code
