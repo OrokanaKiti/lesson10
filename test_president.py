@@ -40,3 +40,12 @@ def test_duckSearch():
 
 # end of program confirmation test
 print("program was allowed to fully execute")
+
+
+# ----------------------------------------------------------------------
+# Junk code
+# ----------------------------------------------------------------------
+
+#def test_duckSearch_fail():
+#
+#   assert 1 == 12 #tester code
