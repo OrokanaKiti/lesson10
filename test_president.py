@@ -1,6 +1,9 @@
 #author- Sammie~ ♫
 #This test is designed to take the results from a DuckDuckGo Search on "presidents of the united states" (instant answers) and return it then process it with known information to ensure accuracy
 #this is lesson 10's HW project
+# NOTE Finding a Instant search displaying all the presidents is taking up lots of time
+# NOTE "The program for the Lesson 10 lab on Integration tests and the REST api has been changed.  It now involves verifying Presidents of the US being listed on the White House website." Check this! We might not need DDG
+
 
 # ----------------------------------------------------------------------
 # import section
@@ -21,7 +24,7 @@ presProper = ["Washington", "Adams", "Jefferson", "Madison", "Monroe", "Adams", 
 #sample inputs used in inital testing or editing in the code
 sample_input_good = ["Adams"]
 sample_input_bad = ["JoeMama"]
-response = requests.get("https://api.duckduckgo.com/?q=valley+forge+national+park&format=json&pretty=1-q")
+response = requests.get("https://www.whitehouse.gov/about-the-white-house/presidents/")
 
 #the input from the api to be tested agianst known good inputs
 #duckDuckInput = []
@@ -49,8 +52,8 @@ def jprint(obj):
 # ----------------------------------------------------------------------
 
 print(response.status_code)
-print(response.json())
-jprint(response.json())
+#print(response.json())
+#jprint(response.json())
 
 # end of program confirmation test
 print("program was allowed to fully execute")
